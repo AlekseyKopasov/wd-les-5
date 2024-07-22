@@ -28,6 +28,542 @@
       <h2 class="shout">CSS</h2>
     </section>
 
+    <!-- TODO Вертикальный ритм  -->
+    <section class="slide">
+      <h2>Вертикальный ритм</h2>
+      <p><b>Вертикальный ритм </b> — это концепция, пришедшая из полиграфии. Мы пытаемся сохранить на странице вертикальное пространство между элементами, согласованными друг с другом</p>
+    </section>
+
+    <section class="slide">
+      <h2>Вертикальный ритм</h2>
+      <p><b> Верстка вертикального ритма </b> — это, в первую очередь, правильная расстановка текста, изображений и других элементов по базовой сетке</p>
+    </section>
+
+    <section class="slide">
+      <h2>Вертикальный ритм</h2>
+      <ul>
+        <li>размер шрифта (font-size)</li>
+        <li>высота строки (line-height)</li>
+        <li>внутренние и внешние отступы (padding, margin)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Строчный блок</h2>
+
+      <p style="display: inline; padding: 20px;">
+        <span style="font-size: 30px; line-height: 1.2; background-color: rgb(255, 174, 0);">Этот</span>
+        <span style="font-size: 20px; line-height: 1.5; ">текст</span>
+        <span style="font-size: 22px; line-height: 1.5; ">состоит</span>
+        <span style="font-size: 28px; line-height: 1; ">из</span>
+        <span style="font-size: 16px; line-height: 1.3; ">строчных</span>
+        <span style="font-size: 30px; line-height: 1.5; ">блоков</span>
+      </p>
+      <pre style="margin-top: 30px;">
+        <code>p {</code>
+        <code>  display: inline;</code>
+        <code>  padding: 20px;</code>
+        <code>  background-color: rgba(0, 195, 255, 0.432);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Блочный блок</h2>
+
+      <p style="display: inline; padding: 20px; background-color: rgba(0, 195, 255, 0.432);">
+        <span style="font-size: 30px; line-height: 1.2; background-color: rgb(255, 174, 0);">Этот</span>
+        <span style="font-size: 20px; line-height: 1.5; background-color:rgb(255, 174, 0);">текст</span>
+        <span style="font-size: 22px; line-height: 1.5; background-color: rgb(255, 174, 0);">состоит</span>
+        <span style="font-size: 28px; line-height: 1; background-color: rgb(255, 174, 0);">из</span>
+        <span style="font-size: 16px; line-height: 1.3; background-color: rgb(255, 174, 0);">строчных</span>
+        <span style="font-size: 30px; line-height: 1.5; background-color: rgb(255, 174, 0);">блоков</span>
+      </p>
+      <pre style="margin-top: 30px;">
+        <code>p {</code>
+        <code>  display: inline;</code>
+        <code>  padding: 20px;</code>
+        <code>  background-color: rgba(0, 195, 255, 0.432);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Блочный блок</h2>
+
+      <p style="display: inline; padding: 20px; background-color: rgba(0, 195, 255, 0.432);">
+        <span style="font-size: 30px; line-height: 1.2; background-color: rgb(255, 174, 0);">Этот</span>
+        <span style="font-size: 20px; line-height: 1.5; background-color:rgb(255, 174, 0);">текст</span>
+        <span style="font-size: 22px; line-height: 1.5; background-color: rgb(255, 174, 0);">состоит</span>
+        <span style="font-size: 28px; line-height: 1; background-color: rgb(255, 174, 0);">из</span>
+        <span style="font-size: 16px; line-height: 1.3; background-color: rgb(255, 174, 0);">строчных</span>
+        <span style="font-size: 30px; line-height: 1.5; background-color: rgb(255, 174, 0);">блоков</span>
+      </p>
+
+      <h3>Влияют на высоту блока</h3>
+
+      <div class="columns two" style="margin-top: 24px;">
+        <ul>
+          <li>font-size</li>
+          <li>line-height</li>
+          <li>vertical-align</li>
+          <li>height</li>
+        </ul>
+        <ul>
+          <li>border-top, border-bottom</li>
+          <li>margin-top, margin-bottom</li>
+          <li>padding-top, padding-bottom</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <h2>Интерлиньяж</h2>
+      <p>Эта разница в виде свободного пространства распределяется сверху и снизу от отображаемых глифов</p>
+      <pre>
+        <code>p {</code>
+          <code>  font-size: 18px;</code>
+          <code>  line-height 1.5; </code>
+        <code>}</code>
+      </pre>
+
+      <p><b>Интерлиньяж</b> = (font-size / line-height) / 2</p>
+    </section>
+
+    <section class="slide">
+      <h2>Высота строки</h2>
+      <p>При прочих отсутствующих значениях, высота строчного блока равна значению <b>line-height</b></p>
+      <pre>
+          <code>p {</code>
+          <code>  font-size: 18px;</code>
+          <code>  line-height 1.5; </code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Расстояние между абзацами</h2>
+      <pre>
+        <code>p {</code>
+        <code>  font-size:1em;</code>
+        <code>  margin-top: 1.5em;</code>
+        <code>  margin-bottom: 1.5em;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Сброс стилей по умолчанию</h2>
+      <pre>
+        <code>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6 {  </code>
+        <code>  margin:0;</code>
+        <code>  padding:0;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Сброс стилей</h2>
+      <ol>
+        <li><b>reset.css</b> — убирает (сбрасывает) все стили по умолчанию</li>
+        <li><b>normalize.css</b> — сбрасывает и стандартизует стили по умолчанию</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Сетка базовых линий</h2>
+      <p>Сетка базовых линий позволяет отследить вертикальные расстояния между объектами в дизайне</p>
+    </section>
+
+    <!-- TODO Сетки  -->
+    <section class="slide">
+      <h2>Сетки</h2>
+      <ol>
+        <li>позволяет задать визуальную систему</li>
+        <li>помогает пользователям ориентироваться</li>
+        <li>помогает достичь согласованности элементов</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Сетки</h2>
+      <figure>
+        <blockquote>
+            <p>&laquo;Структурируя при помощи модульной сетки плоскости и&nbsp;пространство, дизайнер получает возможность организовать тексты, фотографии и&nbsp;графические изображения по&nbsp;принципам объективности и&nbsp;функциональности. Логично организованный дизайн поддерживает достоверность информации и&nbsp;располагает к&nbsp;ней читателя&raquo;</p>
+        </blockquote>
+        <figcaption>&mdash;&nbsp;Йозеф Мюллер-Брокманн, графический дизайнер</figcaption>
+    </figure>
+   <blockquote>
+    </section>
+
+    <section class="slide">
+      <h2>Сетки</h2>
+      <p>Сетка — основа современного веб-дизайна. Сетки помогают читателю воспринимать текстовую и&nbsp;визуальную информацию</p>
+    </section>
+
+    <section class="slide">
+      <h2>Сетки</h2>
+      <p>Построим свою сетку</p>
+      <ol>
+        <li>Определяем количество колонок</li>
+        <li>Регулируем межколоночное расстояние (gutters) и отступы от края экрана (margins)</li>
+        <li>С помощью вертикального ритма задаем систему отступов</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Сетки для адаптивного дизайна</h2>
+      <p>Пример адаптивных сеток:</p>
+      <ol>
+        <li>12 колонок - десктоп</li>
+        <li>8 колонок - планшет</li>
+        <li>2 колоноки - мобильные</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Модульная сетка</h2>
+      <p>Состоит из прямоугольников с заданной шириной и высотой. Строится на пересечении колонок и строк вертикального ритма</p>
+      <img src="img/modul-grid.png" width="500" height="100%" alt=">Модульная сетка" style="display: flex; margin: 0 auto; max-height: 250px; object-fit: cover;">
+    </section>
+
+    <section class="slide">
+      <h2>Сетки 8pt и 10pt</h2>
+      <ul>
+        <li><b>8px</b>: подходит для интерфейсов. Пришла из дизайн-системы Google Material Design</li>
+        <li><b>10px</b>: подходит для веб-дизайна</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Point</h2>
+
+      <p><b>1pt</b> = 4/3 физических пикселей</p>
+      <p>При разрешении &laquo;2x&raquo; (@2x) 1pt = 4&nbsp;пикселя, поскольку разрешение удваивается по&nbsp;осям&nbsp;X и&nbsp;Y, что делает его шириной 2&nbsp;пикселя и&nbsp;высотой 2&nbsp;пикселя.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Сетка — это стандарт</h2>
+
+      <h3>Если в макете есть сетка, верстальщик быстрее:</h3>
+      <ol>
+        <li>разберется с&nbsp;системой пропорций и&nbsp;отступов</li>
+        <li>настроит поведение контента страницы для разных размеров экрана</li>
+        <li>соберет адаптивную версию страницы</li>
+      </ol>
+    </section>
+
+    <!-- TODO Типографика -->
+    <section class="slide">
+      <h2>Типографика</h2>
+      <p><b>Типографика</b> — это набор правил, касающихся визуальных аспектов: структуры, внешнего вида и стиля шрифта</p>
+    </section>
+
+    <section class="slide">
+      <h2>Основные термины</h2>
+      <div class="columns two">
+        <ol>
+          <li>Шрифт</li>
+          <li>Гарнитура</li>
+          <li>Кегль</li>
+          <li>Интерлиньяж</li>
+          <li>Кернинг</li>
+          <li>Трекинг</li>
+        </ol>
+        <ol>
+          <li>Графема</li>
+          <li>Глиф</li>
+          <li>Прописные и строчные буквы</li>
+          <li>Леттеринг</li>
+          <li>Полоса</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Характеристики текстов</h2>
+      <ol>
+        <li>контраст</li>
+        <li>заметность</li>
+        <li>выравнивание</li>
+        <li>удобочитаемость</li>
+        <li>стиль</li>
+      </ol>
+    </section>
+
+    <!-- TODO Шрифты -->
+    <section class="slide">
+      <h2>Шрифты</h2>
+      <p><b>Шрифт</b> — это набор символов, которые связаны между собой единым оформлением</p>
+      <p><b>Гарнитура</b> — это семейство шрифтов, схожих по стилю и различающихся по начертанию</p>
+    </section>
+
+    <section class="slide">
+      <h2>Характеристики шрифтов</h2>
+      <ol>
+        <li>Засечки</li>
+        <li>Контрастность</li>
+        <li>Насыщенность</li>
+        <li>Соотношение ширины и высоты знаков</li>
+        <li>Апертура</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Засечки</h2>
+      <ol>
+        <li><b>Гарнитуры с засечками</b> — Times New Roman, Georgia</li>
+        <li><b>Без засечек</b> — Arial, Montserrat, Verdana</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Контрастность</h2>
+      <p><b>Контрастность</b> — разница между горизонтальными и вертикальными штрихами</p>
+      <ul>
+        <li><span style="font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Этот текст с низкой контрастностью</span></li>
+        <li><span style="font-size: 28px; font-family: 'Times New Roman', Times, serif">Этот текст с более высокой контрастностью</span></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Насыщенность</h2>
+      <p><b>Насыщенность</b> определяется толщиной букв</p>
+
+      <ol>
+        <li><b>сверхсветлые</b> — Ultra Light, Extra Light, Thin</li>
+        <li><b>светлые</b> — Light</li>
+        <li><b>нормальные</b> — Book, Regular, Roman</li>
+        <li><b>полужирные</b> — Medium, Demi Bold, Semibold</li>
+        <li><b>жирные</b> — Bold, Heavy</li>
+        <li><b>сверхжирные</b> — Extra Bold, Black, Ultra Bold</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Соотношение ширины и высоты знаков</h2>
+      <p>Варьируются от узких до широких</p>
+
+      <ul>
+        <li>
+          <span style="background-color: rgba(0, 255, 255, 0.452); font-size: 48px; font-family: Arial, Helvetica, sans-serif">О </span>
+          <pre>
+            <code>font-family: Arial, sans-serif</code>
+          </pre>
+         </li>
+        <li>
+          <span style="background-color: rgba(0, 255, 255, 0.452); font-size: 48px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">О</span>
+          <pre>
+            <code>font-family: Cambria, serif</code>
+          </pre>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Апертура</h2>
+      <p><b>Апертура</b> — «открытость» знака</p>
+
+      <ul>
+        <li>
+          <span style="background-color: rgba(0, 255, 255, 0.452); font-size: 48px; font-family: Arial, Helvetica, sans-serif">С</span>
+          <pre>
+            <code>font-family: Arial, sans-serif</code>
+          </pre>
+         </li>
+        <li>
+          <span style="background-color: rgba(0, 255, 255, 0.452); font-size: 48px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">С</span>
+          <pre>
+            <code>font-family: Cambria, serif</code>
+          </pre>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Как подобрать шрифт</h2>
+      <span>Стоит учитывать:</span>
+      <ol>
+        <li>целевую аудиторию</li>
+        <li>эмоциональную составляющую</li>
+        <li>тематику и стиль продукта</li>
+        <li>технологию производства</li>
+        <li><b>носитель (печать или веб)</b></li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Как подобрать шрифт</h2>
+      <p>Всегда нужно смотреть, как шрифт отображается на разных устройствах, носителях, как он выглядит на печати или при разных расширениях интерфейсов</p>
+    </section>
+
+    <section class="slide">
+      <h2>CSS-свойства применяемые в веб-типографике</h2>
+      <ul>
+        <li><b>font-size</b> — размер шрифта</li>
+        <li><b>line-height</b> — межстрочный интервал</li>
+        <li><b>font-weingt</b> — начертание шрифта с указанной насыщенностью</li>
+        <li><b>color</b> — цвет шрифта</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>CSS-свойства применяемые в веб-типографике</h2>
+      <ul>
+        <li><b>text-align</b> — выравнивание текста</li>
+        <li><b>letter-spacing</b> — межсимвольный интервал</li>
+        <li><b>word-spacing</b> — межбуквенный интервал</li>
+        <li><b>font-style</b> — начертание шрифта</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>CSS-свойства применяемые в веб-типографике</h2>
+      <ul>
+        <li>Сочетание шрифтов с засечками и без засечек</li>
+        <li>Длина строки</li>
+        <li>Структура текста и визуальная иерархия</li>
+        <li>Безопасные шрифты</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Семейства шрифтов: font-family</h2>
+      <pre>
+        <code>p {</code>
+        <code>  font-family: Arial;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Безопасные веб-шрифты</h2>
+      <p><b>Веб-безопасные шрифты</b> — обычно доступны во всех системах</p>
+      <ol>
+        <li>Arial</li>
+        <li>Trebuchet MS</li>
+        <li>Courier New</li>
+        <li>Georgia</li>
+        <li>Verdana</li>
+        <li>Times New Roman</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Шрифты по умолчанию</h2>
+      <ol>
+        <li>serif</li>
+        <li>sans-serif</li>
+        <li>monospace</li>
+        <li>cursive</li>
+        <li>fantasy</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Стек (список) шрифтов</h2>
+      <pre>
+        <code>p {</code>
+        <code>  font-family: <mark>"Open Sans", Verdana, sans-serif</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Размер шрифта</h2>
+      <pre>
+        <code>p {</code>
+        <code>  font-size: <mark>24px</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Eдиницы измерения размера шрифта</h2>
+      <ol>
+        <li><b>px</b> — количество пикселей</li>
+        <li><b>em</b> — 1 em равен размеру шрифта, установленному в родительском элементе текущего элемента, который мы стилизуем </li>
+        <li><b>rem</b> — 1 rem соответствует размеру шрифта, установленному в корневом элементе документа (т. е. html), </li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>font-size</h2>
+      <blockquote>font-size наследуется от родительского элемента</blockquote>
+    </section>
+
+    <section class="slide">
+      <h2>font-style</h2>
+      <ol>
+        <li><b>normal</b> — устанавливает для текста обычный шрифт (отключает существующий курсив)</li>
+        <li><b>italic</b> — устанавливает для текста курсивную версию шрифта</li>
+        <li><b>oblique</b> — устанавливает для текста имитацию курсивного шрифта</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>font-style</h2>
+      <pre>
+        <code>p {</code>
+        <code>  font-style: normal;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>font-weight</h2>
+      <ol>
+        <li><b>normal, bold</b> — нормальный и полужирный шрифт</li>
+        <li><b>lighter, bolder</b> — устанавливает жирность текущего элемента на один шаг легче или тяжелее, чем жирность его родительского элемента</li>
+        <li><b>100–900</b> — числовые значения жирности</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>font-weight</h2>
+      <pre>
+        <code>p {</code>
+        <code>  font-weight: 500;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>text-transform</h2>
+      <ol>
+        <li><b>none</b> — отменяет любую трансформацию</li>
+        <li><b>uppercase</b> — преобразует весь текст в верхний регистр</li>
+        <li><b>lowercase</b> — преобразует весь текст в нижний регистр</li>
+        <li><b>capitalize</b> —
+          преобразует все слова так, чтобы первая буква была заглавной</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>text-transform</h2>
+      <pre>
+        <code>p {</code>
+        <code>  ftext-transform: uppercase;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+
+
+
+
+    <!-- <section class="slide">
+      <h2>Визуальные правила оформления контента</h2>
+      <ol>
+        <li>Использовать стандартные шрифты</li>
+        <li>Использовать не&nbsp;больше двух шрифтов на&nbsp;странице</li>
+        <li>Использовать достаточный размер шрифта</li>
+        <li>Использовать достаточный межстрочный интервал</li>
+        <li>Выравнивать текст по&nbsp;левому краю</li>
+      </ol>
+    </section> -->
+
     <!-- TODO Empty -->
     <section class="slide">
       <h2>Cascading</h2>
