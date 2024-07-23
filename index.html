@@ -544,7 +544,496 @@
       <h2>text-transform</h2>
       <pre>
         <code>p {</code>
-        <code>  ftext-transform: uppercase;</code>
+        <code>  text-transform: uppercase;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>text-decoration</h2>
+      <ol>
+        <li><b>none</b> — отменяет все существующие текстовые оформления</li>
+        <li><b>underline</b> — подчеркивает текст</li>
+        <li><b>overline</b> — придает тексту надчеркивание</li>
+        <li><b>line-through</b> — зачеркивает текст</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>text-decoration</h2>
+      <pre>
+        <code>p {</code>
+        <code>  text-decoration: underline;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>text-align</h2>
+      <ol>
+        <li><b>left</b> — выравнивание текста по левому краю</li>
+        <li><b>right</b> — выравнивание текста по правому краю</li>
+        <li><b>center</b> — центрирует текст</li>
+        <li><b>justify</b> — растягивает текст, изменяя промежутки между словами так, чтобы все строки текста имели одинаковую ширину</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>text-align</h2>
+      <pre>
+        <code>p {</code>
+        <code>  text-align: center;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>line-height</h2>
+      <p>Задает высоту каждой строки текста </p>
+      <pre>
+        <code>p {</code>
+        <code>  line-height: 1,2;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>letter-spacing, word-spacing</h2>
+      <ul>
+        <li><b>letter-spacing</b> устанавливать расстояние между буквами</li>
+        <li><b>word-spacing</b> устанавливать расстояние между словами</span></li>
+      </ul>
+      <pre>
+        <code>p {</code>
+        <code>  letter-spacing: 10px;</code>
+        <code>  word-spacing: 20px;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Свойства для стилизации шрифтов</h2>
+      <ul>
+        <li>font-variant</li>
+        <li>font-kerning</li>
+        <li>font-variant-alternates</li>
+        <li>font-variant-caps</li>
+        <li>font-size-adjust</li>
+        <li>font-stretch</li>
+        <li>text-rendering</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Свойства для стилизации расположения текста</h2>
+      <ul>
+        <li>text-inden</li>
+        <li>text-overflow</li>
+        <li>white-space</li>
+        <li>word-break</li>
+        <li>direction</li>
+        <li>writing-mode</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Рекомендации</h2>
+      <ol>
+        <li>использовать веб-безопасные шрифты</li>
+        <li>использовать не больше двух шрифтов на странице</li>
+        <li>использовать достаточный размер шрифта</li>
+        <li>использовать достаточный межстрочный интервал</li>
+        <li>выравнивать текст по левому краю</li>
+      </ol>
+    </section>
+
+    <!-- TODO Оптимизация шрифтов -->
+    <section class="slide">
+      <h2>Подключение шрифтов</h2>
+      <p>Шрифты устанавливается с помощью свойств <b>font-family</b></p>
+
+      <pre>
+        <code>.p {</code>
+          <code>  font-family: <mark>"Open Sans", Verdana, sans-serif;</mark></code>
+        <code>}</code>
+      </pre>
+
+      <ul>
+        <li><b>Open Sans</b>: используемый шрифт (веб-шрифт)</li>
+        <li><b>Verdana</b>: альтернативный безопасный шрифт</li>
+        <li><b>sans-serif</b>: шрифт по умолчанию</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>@font-face</h2>
+      <p><b>@font-face</b> — директива для одключения нестандартных шрифтов</p>
+
+      <pre>
+        <code>@font-face {</code>
+        <code>  font-family: <mark>"Roboto"</mark>;</code>
+        <code>  src: url("Roboto.woff");</code>
+        <code>}</code>
+      </pre>
+
+      <pre>
+        <code>p {</code>
+        <code>  font-family: <mark>"Roboto"</mark>,  Arial, san-serif;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>@font-face</h2>
+
+      <pre>
+        <code>@font-face {</code>
+        <code>  font-family: <mark>"Roboto"</mark>;</code>
+        <code>  src: </code>
+        <code>    local("Roboto"),</code>
+        <code>    url("Roboto.woff2") format("woff2"),</code>
+        <code>    url("Roboto.woff") format("woff"),</code>
+        <code>    url("Roboto.svg") format("svg");</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>@font-face: разные начертания (1 способ)</h2>
+      <mark>Как задать?</mark>
+
+      <pre>
+        <code>@font-face {</code>
+        <code>  font-family: <mark>"Roboto Bold"</mark>;</code>
+        <code>  src: url("<mark>Roboto-Bold</mark>.woff2") format("woff2")</code>
+        <code>}</code>
+      </pre>
+
+      <pre>
+        <code>@font-face {</code>
+        <code>  font-family: "<mark>Roboto Regular</mark>";</code>
+        <code>  src: url(<mark>"Roboto-Regular</mark>.woff2") format("woff2");</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>@font-face: разные начертания (1 способ)</h2>
+      <mark>Как использовать?</mark>
+      <pre>
+        <code>.block1 {</code>
+          <code>  font-family: <mark>"Roboto Bold"</mark>, Verdana, sans-serif;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>.block2 {</code>
+          <code>  font-family: <mark>"Roboto Regular"</mark>, Verdana, sans-serif;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>@font-face: разные начертания (2 способ)</h2>
+      <mark>Как задать?</mark>
+
+      <pre style="font-size: 18px;">
+        <code>@font-face {</code>
+        <code>  font-family: <mark>"Roboto"</mark>;</code>
+        <code>  src: url("<mark>Roboto-Bold</mark>.woff2") format("woff2");</code>
+        <code>  <mark>font-weight: bold</mark>;</code>
+        <code>}</code>
+      </pre>
+
+      <pre style="font-size: 18px;">
+        <code>@font-face {</code>
+        <code>  font-family: "<mark>Roboto</mark>";</code>
+        <code>  src: url(<mark>"Roboto-Regular</mark>.woff2") format("woff2");</code>
+        <code>  <mark>font-weight: normal</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>@font-face: разные начертания (2 способ)</h2>
+      <mark>Как использовать?</mark>
+      <pre>
+        <code>.block1 {</code>
+          <code>  font-family: <mark>"Roboto"</mark>, Verdana, sans-serif;</code>
+          <code>  font-weight: <mark>bold</mark>;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>.block2 {</code>
+          <code>  font-family: <mark>"Roboto"</mark>, Verdana, sans-serif;</code>
+          <code>  font-weight: <mark>normal</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>На что обратить внимание</h2>
+      <ol>
+        <li>браузеры используют разные форматы шрифтов</li>
+        <li>в большинстве случаев шрифты <mark class="important">не бесплатны</mark></li>
+        <li>проверяем наличие шрифта на Google Fonts</li>
+        <li>если в макете несистемный шрифт - просим дизайнера/заказчика предоставить файл или ссылку на шрифт</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Где искать шрифты</h2>
+      <p><b>Бесплатные дистрибутивы шрифтов</b>: предоставляют бесплатные шрифты для скачивания (могут существовать некоторые условия лицензии, например, указание разработчика шрифта). Например: <b>Font Squirrel, dafont, Everything Fonts</b></p>
+    </section>
+
+    <section class="slide">
+      <h2>Где искать шрифты</h2>
+      <p><b>Платные дистрибутивы шрифтов</b>: предоставляют платные шрифты, например, <b>fonts.com</b> или <b>myfonts.com</b>. Можно также приобрести шрифты непосредственно у производителя шрифтов, например <b>Linotype, Monotype</b> или <b>Exljbris</b>.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Где искать шрифты</h2>
+      <p><b>Сервисы онлайн-шрифтов</b>: сайты, которые предоставляют шрифты и упрощающие определенные процессы по скачиванию или подключению шрифтов. Например: <b>Google Fonts</b></p>
+    </section>
+
+    <section class="slide">
+      <h2>Конвертирование шрифтов</h2>
+      <ol>
+        <li>убедится, что вы выполнены все лицензионные требования</li>
+        <li>перейти сайт <a href="https://fontie.pixelsvsbytes.com/webfont-generator" target="_blank">Fontie</a></li>
+        <li>загрузить файл с шрифтом в генератор</li>
+        <li>выбрать генерируемые форматы</li>
+        <li>выбрать дополнительные настройки</li>
+        <li>запустить конвертирование: <b>&laquo;Generate &amp;&nbsp;download your @font-face package&raquo;</b></li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Подключение шрифтов</h2>
+      <ol>
+        <li>шрифта с помощью тега <mark>link</mark> в секции <mark>head</mark> страницы</li>
+        <li>использовать импорт шрифта в файле стилей</li>
+      </ol>
+    </section>
+
+    <!-- TODO Изображения -->
+    <section class="slide clear">
+      <h2 class="shout">Изображения</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Контентная и декоративная графика</h2>
+      <ul>
+        <li>Контентное изображение — для содержимого (контента)</li>
+        <li>Декоративное изображение — для оформления</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Как разместить картинку на странице?</h2>
+
+      <pre>
+        <code>&lt;img src=&quot;my-image.png&quot;&quot;&gt;</code>
+      </pre>
+
+    </section>
+
+    <section class="slide">
+      <h2>Как разместить картинку на странице?</h2>
+
+      <pre>
+        <code>&lt;img src=&quot;my-image.png&quot;&quot;&gt;</code>
+      </pre>
+
+      <ul>
+        <li>абсолютный URL: <mark>src="https://www.example.com/images/my-image.png"</mark></li>
+        <li>относительный URL: <mark>src="images/my-image.png"</mark></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Атрибуты тега &lt;img&gt;</h2>
+
+      <ol>
+        <li><b>src</b> — путь до изображения</li>
+        <li><b>alt</b> — альтернативный текст</li>
+        <li><b>width</b> — ширина изображения</li>
+        <li><b>height</b> — высота изображения</li>
+      </ol>
+
+      <pre>
+        <code>&lt;img src=&quot;image.png&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;&#1086;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; &#1080;&#1079;&#1086;&#1073;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;&quot;&gt;</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Альтернативный текст (alt)</h2>
+
+      <p>текстовое описание изображения для использования в ситуациях, когда изображение не может быть просмотрено / отображено или отрисовка занимает много времени из-за медленного интернет-соединения</p>
+    </section>
+
+    <section class="slide">
+      <h2>Альтернативный текст (alt)</h2>
+      <h3>Нужен:</h3>
+      <ol>
+        <li>если была допущена ошибка в имени файла или пути к нему</li>
+        <li>при использовании устройства чтения с экрана</li>
+        <li>если браузер не поддерживает формат данного изображения</li>
+        <li>для поисковых систем</li>
+        <li>если у пользователя отключено отображение изображений на странице</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Альтернативный текст (alt)</h2>
+      <h3>Что писать:</h3>
+      <p>Нужно описать словами, что вы потеряете, если ваше изображение не появится.  Какое изображение несет смысл</p>
+
+      <mark>Главная идея здесь это предоставить нечто полезное, для случая, когда изображения не видны.</mark>
+    </section>
+
+    <section class="slide">
+      <h2>Ширина и высота (width и height)</h2>
+      <p>Их указание говорит браузеру сколько оставить места для отрисовки изображения до его загрузки</p>
+    </section>
+
+    <section class="slide">
+      <h2>Вставка &lt;svg&gt;</h2>
+
+      <pre>
+        <code>&lt;svg width=&quot;30&quot; height=&quot;30&quot;&gt;</code>
+        <code>  &lt;path d=&quot;...&quot;/&gt;</code>
+        <code>&lt;/svg&gt;</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Вставка через CSS</h2>
+
+      <p>Подходит для декоративных изображений. Есть два способа вставить декоративное изображение: сделать фоном или добавить, как псевдоэлемент</p>
+    </section>
+
+    <section class="slide">
+      <h2>background-image</h2>
+
+      <span><mark>Значения:</mark></span>
+      <ol>
+        <li>none</li>
+        <li>url('путь_к_изображению')</li>
+        <li>linear-gradient(), radial-gradient(), repeating-linear-gradient(), repeating-radial-gradient()</li>
+      </ol>
+
+      <pre>
+        <code>.element {</code>
+        <code>  background-image: url("image.jpg");</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>background-repeat</h2>
+
+      <ol>
+        <li><b>repeat</b> — значение по умолчанию, изображение повторяется по горизонтали и вертикали</li>
+        <li><b>repeat-x</b> — повторяется только по горизонтали</li>
+        <li><b>repeat-y</b> — повторяется только по вертикали</li>
+        <li><b>no-repeat</b> — отображается только один раз без повторения</li>
+      </ol>
+
+      <pre>
+        <code>.element {</code>
+        <code>  background-repeat: no-repeat;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>background-size</h2>
+
+      <ol>
+        <li><b>auto</b> — отображается в своём естественном размере</li>
+        <li><b>cover</b> — масштабируется так, чтобы полностью заполнить фон элемента</li>
+        <li><b>contain</b> — масштабируется так, чтобы полностью поместиться в фон элемента без искажений</li>
+      </ol>
+
+      <pre>
+        <code>.element {</code>
+        <code>  background-size: cover;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Вставка изображений с помощью псевдоэлементов</h2>
+      <p>Псевдоэлементы создают внутри элемента псевдотег, которого нет в разметке сайта</p>
+
+      <ul>
+        <li>::before</li>
+        <li>::after</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Пиксель</h2>
+      <ul>
+        <li>физический пиксель</li>
+        <li>CSS-пиксель</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Пиксель</h2>
+      <ul>
+        <li><b>физический пиксель</b> — пиксель на матрице устройства </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>PPI</h2>
+      <p><b>Pixels per Inch</b> — единица измерения плотности экранов</p>
+    </section>
+
+    <section class="slide">
+      <h2>CSS-пиксель</h2>
+      <p>разработчики работают только с CSS-пикселями</p>
+      <p>1 CSS-пиксель = 1/96 дюйма или 0,26 мм или 1 физический пиксель</p>
+    </section>
+
+    <section class="slide">
+      <h2>Ретина-дисплеи</h2>
+      <p><b>Ретиной</b> называют дисплеи Apple с повышенной плотностью пикселей на квадратный дюйм</p>
+    </section>
+    </section>
+
+    <section class="slide">
+      <h2>Как узнать плотность пикселей</h2>
+      <ul>
+        <li><b>Apple</b>: зайти на официальный сайт, выбрать интересующий девайс и нажать на кнопку «Спецификация»</li>
+        <li><b>для других устройств</b>: можно воспользоваться онлайн-калькулятором (7pads.com, myresolutionis.ru или prostudio.ru)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Особенности вёрстки под ретина-экраны</h2>
+      <ol>
+        <li><b>текст</b>: все тексты на сайте нужно добавлять не изображениями, а с помощью &lt;p&gt;, &lt;h1...h6&gt;, &lt;span&gt; и других тегов. <mark>Исключение — логотипы</mark></li>
+        <li><b>иконки и декоративные изображения</b>: лучшее решение для иконок и декоративных элементов — использование формата SVG</li>
+        <li><b>контентные и фоновые изображения</b>: обычно используют PNG, JPG, WebP и другие растровые форматы</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Особенности вёрстки под ретина-экраны</h2>
+      <p>Графика должна быть подготовлена как минимум <mark>для двух вариантов экранов</mark>. Один для обычных дисплеев, второй, с увеличенным количеством пикселей — для ретины</p>
+    </section>
+
+    <section class="slide">
+      <h2>Фоновые изображения для ретина-экранов</h2>
+      <pre>
+        <code>.element {</code>
+        <code>  background-image: url("../image.png");</code>
+        <code class="mark">  @media (min-resolution: 2dppx) {</code>
+        <code class="mark">    background-image: url("../image@2x.png");</code>
+        <code class="mark">  }</code>
         <code>}</code>
       </pre>
     </section>
@@ -552,17 +1041,6 @@
 
 
 
-
-    <!-- <section class="slide">
-      <h2>Визуальные правила оформления контента</h2>
-      <ol>
-        <li>Использовать стандартные шрифты</li>
-        <li>Использовать не&nbsp;больше двух шрифтов на&nbsp;странице</li>
-        <li>Использовать достаточный размер шрифта</li>
-        <li>Использовать достаточный межстрочный интервал</li>
-        <li>Выравнивать текст по&nbsp;левому краю</li>
-      </ol>
-    </section> -->
 
     <!-- TODO Empty -->
     <section class="slide">
