@@ -810,10 +810,101 @@
     <section class="slide">
       <h2>Подключение шрифтов</h2>
       <ol>
-        <li>шрифта с помощью тега <mark>link</mark> в секции <mark>head</mark> страницы</li>
+        <li>с помощью тега <mark>link</mark> в секции <mark>head</mark> страницы</li>
         <li>использовать импорт шрифта в файле стилей</li>
       </ol>
     </section>
+
+    <!-- TODO Изображения -->
+    <section class="slide clear">
+      <h2 class="shout">Цвет</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет</h2>
+      <p>На уровне элементов HTML, всему можно присвоить цвет</p>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет для текста</h2>
+      <ol>
+        <li><b>color</b>: применяется к тексту</li>
+        <li><b>background-color</b>: цвет фона</li>
+        <li><b>text-shadow</b>: тень для текста</li>
+        <li><b>text-decoration-color</b>: для элементов оформления текста (подчёркивание, перечёркивание)</li>
+        <li><b>text-emphasis-color</b>: используется для выделения диакритических знаков, прилегающих к каждому текстовому символу</li>
+        <li><b>caret-color</b>: для каретки (курсора ввода текста)</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет для текста</h2>
+
+      <pre>
+        <code>span {</code>
+        <code>  color: #222222;</code>
+        <code>  backgroud-color: #fccece;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет для блоков</h2>
+      <ol>
+        <li><b>borders</b>: цвет для границ блока</li>
+        <li><b>background-color</b>: цвет фона блока</li>
+        <li><b>column-rule-color</b>: цвет линий, которые разделяют колонки текста</li>
+        <li><b>outline-color</b>: цвет контура, вокруг границы элемента</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет для блоков</h2>
+
+      <pre>
+        <code>.element {</code>
+        <code>  padding: 24px;</code>
+        <code class="mark">  border: 1px solid #222222;</code>
+        <code class="mark">  backgroud-color: #fccece;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет для границ</h2>
+      <ol>
+        <li><b>border-color</b>: задаёт единый цвет для всех сторон границы элемента</li>
+        <li><b>boborder-left-color, border-right-color, border-top-color, border-bottom-colorrders</b>:  установливает цвет соответствующей стороне границы</li>
+        <li><b>border-block-start-color, border-block-end-color</b>: установливает цвет границ, которые расположены ближе всего к началу и концу блока</li>
+        <li><b>border-inline-start-color, border-inline-end-color</b>: установливает цвет границы, расположенной ближе всего к началу и концу текста в блоке</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет для границ</h2>
+
+      <pre>
+        <code>.element {</code>
+        <code>  padding: 24px;</code>
+        <code class="mark">  border: 1px solid #222222;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+
+    <section class="slide">
+      <h2>Где ещё можно использовать цвет</h2>
+      <ul>
+        <li>HTML Canvas API</li>
+        <li>SVG</li>
+        <li>WebGL</li>
+      </ul>
+    </section>
+
+
+
+
+
 
     <!-- TODO Изображения -->
     <section class="slide clear">
