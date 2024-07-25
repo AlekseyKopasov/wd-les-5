@@ -1053,7 +1053,226 @@
       </pre>
     </section>
 
+    <section class="slide">
+      <h2>Глобальные значения (inherit, initial, unset)</h2>
+      <p>Для того чтобы элемент унаследовал бы цвет от родительского элемента, можно воспользоваться глобальным значением <mark>inherit</mark></p>
+      <pre>
+        <code> p {</code>
+        <code>  color: rgba(0, 0, 0, 1);</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code> a {</code>
+        <code>  color: <mark class="ignore">inherit;</mark></code>
+        <code>}</code>
+      </pre>
+    </section>
 
+    <section class="slide">
+      <h2>Глобальные значения (inherit, initial, unset)</h2>
+      <p><mark>unset</mark> позволяет сбросить значение свойства до унаследованного значения в том случае, если свойство естественным образом наследует это значение от родительского элемента</p>
+      <pre>
+        <code> span {</code>
+        <code>  color: <mark class="ignore">unset;</mark></code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Глобальные значения (inherit, initial, unset)</h2>
+      <p>Ключевое слово <mark>initial</mark> говорит браузеру использовать значение по умолчанию для заданного CSS-свойства</p>
+      <pre>
+        <code> a {</code>
+        <code>  color: <mark class="ignore">initial;</mark></code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>currentColor для SVG-иконок</h2>
+      <pre>
+        <code>&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;</code>
+        <code>  &lt;svg <mark>fill=&quot;currentColor&quot;</mark>&gt;&lt;/svg&gt;</code>
+        <code>&lt;/a&gt;</code>
+      </pre>
+      <pre>
+        <code>.link {</code>
+        <code>  color: #ff0000;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <!-- TODO Цветовые функции CSS -->
+    <section class="slide">
+      <h2>Цветовые функции CSS</h2>
+      <p>Цветовые функции CSS (CSS color functions) — это способ задания цвета в CSS при помощи математических функций, а не простого кода цвета</p>
+      <ul>
+        <li><b>rgb()</b>: rgb(255, 0, 0) </li>
+        <li><b>rgba()</b>: rgb(255, 0, 0, 0.8) </li>
+        <li><b>hsl()</b>: hsl(0, 100%, 50%)</li>
+        <li><b>hsla()</b>: sla(0, 100%, 50%, 0.5)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет и переменные CSS</h2>
+
+      <pre>
+        <code>:root {</code>
+        <code>  --primary-color: blue;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>span {</code>
+        <code>  color: var(--primary-color);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Цвет и переменные CSS</h2>
+
+    <ol>
+      <li>Многократное использование кода</li>
+      <li>Удобство поддержки</li>
+      <li>Гибкость</li>
+    </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Создание палитры цветов</h2>
+      <p>Можно начать с основного цвета, а затем выбрать цвета, дополняющих его:</p>
+      <pre>
+        <code>:root {</code>
+        <code>  --main-color: hsl(180, 100%, 50%);</code>
+        <code>  --secondary-color: hsl(120, 100%, 50%);</code>
+        <code>  --accent-color: hsl(0, 100%, 50%);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Тестирование цветовых функций на читаемость и accessibility</h2>
+      <p>Цвета должны быть достаточно контрастны, чтобы легко читаться, особенно для людей с недостатком цветового зрения</p>
+      <img src="img/color-contrast.png" width="100%" height="200px" style="display: flex; margin: 0 auto; object-fit: contain;" alt="">
+    </section>
+
+    <section class="slide">
+      <h2>Техники работы с цветовыми функциями CSS</h2>
+      <ul>
+        <li>Использование переменных CSS</li>
+        <li>Создание анимаций</li>
+        <li>Использование для градиентов и прозрачности</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Современный цветовой синтаксис</h2>
+      <p><b>CSS Color Module Level 4</b> предоставляет более удобный синтаксис для цветовых функций, который широко поддерживается в браузерах</p>
+
+      <pre>
+        <code>span {</code>
+        <code>  color: hsl(<mark>0 100% 50% /</mark> 0.5);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Новые цветовые функции CSS</h2>
+
+      <ul>
+        <li>hwb()</li>
+        <li>lab()</li>
+        <li>oklab()</li>
+        <li>lch()</li>
+        <li>oklch()</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>hwb()</h2>
+      <p><mark>hwb</mark> означает <b>Hue</b>/оттенок, <b>Whiteness</b>/белизна и <b>Blackness</b>/чернота</p>
+      <img src="img/hwb.png" width="100%" alt="" style="max-height: 250px; object-fit: cover;">
+      <cite class="small" >Источник <a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/" target="_blank">Smashing Magazine</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>lab()</h2>
+      <p><mark>lab</mark> и <mark>lch</mark> определены в спецификации, как независимые от устройства цвета. lab использует три оси: яркость, a-axis/ось А (от зелёного к красному) и b-axis/ось Б (от синего к жёлтому)</p>
+      <img src="img/lab-pallete.png" width="100%" alt="" style="max-height: 180px; object-fit: cover;">
+      <cite class="small" >Источник <a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/" target="_blank">Smashing Magazine</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>lch()</h2>
+      <p><mark>lch</mark> означает <b>Lightness</b>/яркость, <b>Chroma</b>/цветность, и <b>Hue</b>/оттенок</p>
+      <img src="img/lch.png" width="100%" alt="" style="max-height: 180px; object-fit: cover;">
+      <cite class="small" >Источник <a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/" target="_blank">Smashing Magazine</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Зачем нужны lab и lch?</h2>
+
+      <ol>
+        <li>использование lab и lch даёт нам доступ к гораздо большему диапазону цветов</li>
+        <li>lab и lch созданы, что бы дать нам доступ ко всему спектру человеческого зрения</li>
+      </ol>
+
+      <p><a href="https://codepen.io/smashingmag/pen/yLoGJXd" target="_blank">Демонстрация контраста между lch и hsl</a></p>
+      <p><a href="https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/" target="_blank">Леа Веру: "LCH colors in CSS: what, why, and how?"</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Display-P3</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Display-P3</h2>
+      <ul>
+        <li>rgb(), hsl(), hex</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Display-P3</h2>
+      <ul>
+        <li><span style="text-decoration: line-through;">rgb(), hsl(), hex</span></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>oklab() и oklch()</h2>
+     <p>Цветовые пространства <mark>oklab</mark> и <mark>oklch</mark> были созданы Бьёрном Оттоссоном в 2020 году</p>
+    </section>
+
+    <section class="slide">
+      <h2>Поддержка браузерами</h2>
+
+      <p><b>hwb(), lab(), lch() и oklch()</b> поддерживается в Chrome, Safari и Firefox</p>
+      <p><mark>Их можно сразу начинать использовать, предоставив запасной вариант для браузеров, не поддерживающих их</mark></p>
+
+    </section>
+
+    <!-- TODO Дизайн-система -->
+    <section class="slide">
+      <h2>Дизайн-система</h2>
+      <p><b>Дизайн-система</b> — набор инструментов и правил, упрощающих проектирование интерфейсов. Включает в себя:</p>
+      <ul>
+        <li>макеты элементов</li>
+        <li>реализация макетов в коде</li>
+        <li>принципы и правила создания макетов</li>
+        <li>руководства по стилю</li>
+        <li>интерфейсные паттерны</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Дизайн-система</h2>
+      <ul>
+        <li><b>готовые открытые системы</b>: Ant Design, Material Design, Consta</li>
+        <li><b>внутренние корпоративные системы</b>: Mail.ru, «Вконтакте», «Альфа-банк»</li>
+      </ul>
+    </section>
 
 
 
