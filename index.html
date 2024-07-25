@@ -736,7 +736,7 @@
       <h2>@font-face: разные начертания (2 способ)</h2>
       <mark>Как задать?</mark>
 
-      <pre style="font-size: 18px;">
+      <pre style="font-size: 16px;">
         <code>@font-face {</code>
         <code>  font-family: <mark>"Roboto"</mark>;</code>
         <code>  src: url("<mark>Roboto-Bold</mark>.woff2") format("woff2");</code>
@@ -744,7 +744,7 @@
         <code>}</code>
       </pre>
 
-      <pre style="font-size: 18px;">
+      <pre style="font-size: 16px;">
         <code>@font-face {</code>
         <code>  font-family: "<mark>Roboto</mark>";</code>
         <code>  src: url(<mark>"Roboto-Regular</mark>.woff2") format("woff2");</code>
@@ -874,7 +874,7 @@
       <h2>Цвет для границ</h2>
       <ol>
         <li><b>border-color</b>: задаёт единый цвет для всех сторон границы элемента</li>
-        <li><b>boborder-left-color, border-right-color, border-top-color, border-bottom-colorrders</b>:  установливает цвет соответствующей стороне границы</li>
+        <li><b>border-left-color, border-right-color, border-top-color, border-bottom-colorrde</b>:  установливает цвет соответствующей стороне границы</li>
         <li><b>border-block-start-color, border-block-end-color</b>: установливает цвет границ, которые расположены ближе всего к началу и концу блока</li>
         <li><b>border-inline-start-color, border-inline-end-color</b>: установливает цвет границы, расположенной ближе всего к началу и концу текста в блоке</li>
       </ol>
@@ -891,7 +891,6 @@
       </pre>
     </section>
 
-
     <section class="slide">
       <h2>Где ещё можно использовать цвет</h2>
       <ul>
@@ -899,6 +898,159 @@
         <li>SVG</li>
         <li>WebGL</li>
       </ul>
+    </section>
+
+    <section class="slide">
+      <h2>color</h2>
+      <p>CSS-свойство <mark>color</mark> позволяет задавать основной цвет  (foreground color) элемента </p>
+
+      <pre>
+        <code>h2 {</code>
+        <code>  color: <mark>#222222;</mark></code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Значения свойства color</h2>
+      <ol>
+        <li>названия именованных цветов</li>
+        <li>шестнадцатеричные коды цветов</li>
+        <li>цвета, задаваемые с помощью функций <mark>rgb()</mark> и <mark> hsl()</mark> и других</li>
+        <li>глобальные значения <mark>inherit</mark>, <mark>initial</mark>, <mark>unset</mark></li>
+        <li>ключевое слово <mark>currentColor</mark></li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Стандартные наименования цветов</h2>
+      <p><a href="https://drafts.csswg.org/css-color-3/#svg-color" target="_blank"> Полный список стандартных цветов</a></p>
+
+      <pre>
+        <code>p {</code>
+        <code>  color: <mark>tomato</mark></code>
+        <code>}</code>
+      </pre>
+
+      <p style="color: tomato;">Тест, цвет которого задан с помощью стандартного цвета <mark>tomato</mark></p>
+    </section>
+
+    <section class="slide">
+      <h2>Шестнадцатеричные цветовые значения</h2>
+      <p>Задаются с помощью hex-нотации: <mark>#ffffff</mark></p>
+
+      <img src="img/hex.png" width="300" style="display: flex; margin: 0 auto;" alt="">
+
+      <pre style="font-size: 16px;">
+        <code>p {</code>
+        <code>  color: <mark>#5d32ff;</mark></code>
+        <code>}</code>
+      </pre>
+
+      <p style="color: #5d32ff;">Тест, цвет которого задан с помощью hex: <mark>#5d32ff</mark></p>
+    </section>
+
+    <section class="slide">
+      <h2>rgb() и rgba()</h2>
+      <p><mark>rgb</mark> (red, green, blue) — это цветовая модель, где цвета прдставлены тремя значениями в диапазоне 0 - 255 или процентами 0 - 100%</p>
+
+      <pre style="font-size: 16px;">
+        <code>p {</code>
+        <code>  color: <mark>rgb(71, 206, 224);</mark></code>
+        <code>}</code>
+      </pre>
+
+      <p style="color: rgb(71, 206, 224);">Тест, цвет которого задан с помощью rgb: <mark>rgb(71, 206, 224)</mark></p>
+    </section>
+
+    <section class="slide">
+      <h2>rgb() и rgba()</h2>
+      <p><mark>a</mark> — это альфа-канал. Для прозрачности</p>
+
+      <pre style="font-size: 16px;">
+        <code>p {</code>
+        <code>  color: <mark>rgba(71, 0, 0, 0.6);</mark></code>
+        <code>}</code>
+      </pre>
+
+      <p style="color: rgba(71, 0, 0, 0.6);">Тест, цвет которого задан с помощью rgba: <mark>rgba(71, 0, 0, 0.6);</mark></p>
+    </section>
+
+    <section class="slide">
+      <h2>hsl()</h2>
+      <p><mark>HSL</mark> (Hue, Saturation, Lightness) — тон, насыщенность, светлота</p>
+
+      <img src="img/hsl-1.png" width="100%" height="300" style="display: flex; margin: 0 auto; object-fit: cover;" alt="">
+    </section>
+
+    <section class="slide">
+      <h2>hsl()</h2>
+      <p><mark>HSL</mark> (Hue, Saturation, Lightness) — тон, насыщенность, светлота</p>
+
+      <img src="img/hsl-2.png" width="300" height="300" style="display: flex; margin: 0 auto; object-fit: cover;" alt="">
+    </section>
+
+    <section class="slide">
+      <h2>hsl()</h2>
+      <p><a href="https://hslpicker.com/#db247c" target="_blank">HSL COLOR PICKER</a></p>
+
+      <img src="img/hsl-3.png" width="100%" height="300" style="display: flex; margin: 0 auto; object-fit: contain;" alt="">
+    </section>
+
+    <section class="slide">
+      <h2>Ключевое слово currentColor</h2>
+      <p><mark>currentColor</mark> хранит значение CSS-свойства color</p>
+      <ul>
+        <li>border-color</li>
+        <li>text-decoration-color</li>
+        <li>outline-color</li>
+        <li>box-shadow</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Ключевое слово currentColor</h2>
+      <p style="border: 3px solid transparent;"><mark>currentColor</mark> хранит значение CSS-свойства color</p>
+
+      <pre style="font-size: 16px;">
+        <code>p {</code>
+        <code>  color: #222;</code>
+        <code class="mark">  border: 3px solid;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Ключевое слово currentColor</h2>
+      <p style="color: #222;border: 3px solid;"><mark>currentColor</mark> хранит значение CSS-свойства color</p>
+
+      <pre style="font-size: 16px;">
+        <code>p {</code>
+        <code>  color: #222;</code>
+        <code>  border: 3px solid <mark>currentColor</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Использование инструментов разработчика для исследования цветов</h2>
+      <img src="img/dev-img.jpg" width="100%" style="display: flex; margin: 0 auto; background-color: antiquewhite;" alt="">
+    </section>
+
+    <section class="slide">
+      <h2>Новый формат записи цветов</h2>
+      <mark>/* До */</mark>
+      <pre>
+        <code> div {</code>
+        <code>  background-color: <mark class="ignore">rgba(0, 0, 0, 1)</mark>;</code>
+        <code>}</code>
+      </pre>
+      <mark>/* После */</mark>
+      <pre>
+        <code> div {</code>
+        <code>  background-color: <mark class="ignore">rgba(0 0 0 / 1);</mark></code>
+        <code>}</code>
+      </pre>
     </section>
 
 
